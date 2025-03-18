@@ -115,6 +115,7 @@
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
         position: relative;
+       z-index: 999999;
     }
 
     .navbar-dark .navbar-collapse {
@@ -158,9 +159,82 @@
     background-size: cover;
 }
 
-.hero-header img {
+.hero-header #out{
     animation: imgRotate 50s linear infinite;
+ 
+  
 }
+#ins{
+    position: relative;
+}
+
+#in{
+    position: absolute;
+  
+   top: 0;
+   
+}
+
+#outside img{
+    height: 450px;
+    width: 450px;
+    transition: 0.5s;
+}
+#ro2{
+    position: relative;
+    
+}
+#ro1{
+    position: absolute;
+    animation: imgRotate 50s linear infinite;
+    
+    
+}
+
+#outside{
+    position: absolute;
+    top: 100px;
+    right: 90px;
+}
+
+@media screen and (max-width: 983px) {
+    
+#outside img{
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+    margin-right: -90px;
+}
+}  
+
+@media screen and (max-width: 500px) {
+    
+    #outside img{
+        height: 150px;
+        width: 150px;
+        margin-right: -16px;
+        margin-top: -30px;
+        
+    }
+    #ro2{
+        display: none;
+       }
+       #ro1{
+        display: none;
+       }
+    }  
+
+  
+
+    
+    
+
+
+
+
+
+
+
 
 @keyframes imgRotate { 
     100% { 
@@ -178,6 +252,7 @@
     position: relative;
     display: inline-block;
 }
+
 
 .section-title::before {
     position: absolute;
@@ -380,9 +455,14 @@
     transition: .5s;
 }
 
+
+
+
 .testimonial-carousel .owl-item.center .testimonial-item {
     background: var(--primary) !important;
     border-color: var(--primary) !important;
+    height: 400px;
+    
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item * {
@@ -459,7 +539,6 @@
 .footer .copyright {
     padding: 25px 0;
     font-size: 15px;
-    
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
